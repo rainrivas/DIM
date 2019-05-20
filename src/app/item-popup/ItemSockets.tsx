@@ -61,6 +61,9 @@ class ItemSockets extends React.Component<Props> {
       return null;
     }
 
+    // TODO: remove help tips for best rated
+    // TODO: use a different icon for community rated
+
     return (
       <div className="item-details sockets">
         {item.sockets.categories.map(

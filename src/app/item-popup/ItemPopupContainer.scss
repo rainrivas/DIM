@@ -135,7 +135,7 @@
   justify-content: space-around;
 }
 .move-popup-tab {
-  opacity: 0.8;
+  color: hsl(0, 0%, 80%);
   padding: 5px 0 3px;
   cursor: pointer;
   width: 100%;
@@ -146,7 +146,8 @@
     border-bottom: 2px solid $orange;
   }
   &:hover {
-    opacity: 1;
+    color: white;
+    background-color: #3f3f3f;
   }
 }
 

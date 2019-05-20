@@ -46,8 +46,8 @@ function ItemDescription({ item, notes }: Props) {
       ) : (
         notes && (
           <div
+            className={[styles.addNote, styles.description].join(' ')}
             role="button"
-            className={styles.description}
             onClick={() => setNotesOpen(true)}
             tabIndex={0}
           >
@@ -59,7 +59,12 @@ function ItemDescription({ item, notes }: Props) {
       {!notesOpen && (loreLink || (item.taggable && !notes)) && (
         <div className={styles.descriptionTools}>
           {item.taggable && !notes && (
-            <div role="button" onClick={() => setNotesOpen(true)} tabIndex={0}>
+            <div
+              role="button"
+              className={styles.addNote}
+              onClick={() => setNotesOpen(true)}
+              tabIndex={0}
+            >
               <AppIcon icon={faPencilAlt} /> Add a note
             </div>
           )}
