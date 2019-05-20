@@ -52,7 +52,7 @@ interface State {
 }
 
 const popperOptions = {
-  placement: 'top-start',
+  placement: 'right',
   eventsEnabled: false,
   modifiers: {
     preventOverflow: {
@@ -161,6 +161,7 @@ class ItemPopupContainer extends React.Component<Props, State> {
       </Sheet>
     ) : (
       <div
+        key={item.index}
         className={`move-popup-dialog is-${item.tier} ${
           $featureFlags.newItemPopup ? 'new-popup' : ''
         }`}
